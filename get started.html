@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>All the data we collect will be kept completely confidential and will be used for therapy or research purposes only.</title>
+    <style>
+      /* CSS styling */
+    /*  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  #age, #gender, #info, #info2, #info3, #info4, #info5, #info6, #info7, #info8, #other {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+
+  }
+  
+  #other form {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    display: block;
+
+  }
+  
+  button {
+    margin-top: 20px;
+  }
+  
+  #result {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #result p {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  #result {
+    display: none;
+  }
+*/
+
+body {
+        font-family: Arial, sans-serif;
+      }
+      
+      h1 {
+        text-align: center;
+      }
+      
+      #age,
+      #gender,
+      #info,
+      #info2,
+      #info3,
+      #info4,
+      #info5,
+      #info6,
+      #info7,
+      #info8,
+      #other,
+      #result {
+        margin: 0 auto;
+        width: 400px;
+      }
+      
+      input[type="number"],
+      input[type="text"],
+      input[type="radio"],
+      button[type="submit"] {
+        margin-top: 10px;
+      }
+      
+      button {
+        padding: 8px 16px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: #45a049;
+      }
+
+
+      
+/*
+  input[type="radio"] {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+label {
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+.get-started-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.get-started-section label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.get-started-section input[type="radio"] {
+  margin-right: 10px;
+}
+*/
+
+    </style>
+  </head>
+  <body>
+    <h1>All the data we collect will be kept completely confidential and will be used for therapy or research purposes only.</h1>
+<div id="age">
+  <h2>What is your age?</h2>
+  <input type="number" id="age-input" min="1" max="120" required>
+  <button id="age-button">Next</button>
+</div>
+
+<div id="gender" style="display: none;">
+  <h2>What is your gender?</h2>
+  <label>
+    <input type="radio" name="gender" value="male" required>
+    Male
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="gender" value="female" required>
+    Female
+  </label>
+  <br>
+
+  <label>
+    <input type="radio" name="gender" value="other" required>
+    Other
+  </label>
+  <br>
+  <button id="gender-button">Next</button>
+</div>
+
+<div id="info" style="display: none;">
+  <h2>I am: [they can choose only one]</h2>
+  <label>
+    <input type="radio" name="info" value="The victim" required>
+    The victim
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info" value="A teacher" required>
+    A teacher
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info" value="A caregiver" required>
+    A caregiver
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info" value="A neighbor/ acquaintance" required>
+    A neighbor/ acquaintance
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info" value="Not related, but I care" required>
+    Not related, but I care
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info" value="The perpetrator" required>
+    The perpetrator
+  </label>
+  <br>
+
+  <label>
+    <input type="radio" name="info" value="other" required>
+    Other
+  </label>
+  <br>
+  <button id="info-button">Next</button>
+</div>
+
+<div id="info2" style="display: none;">
+  <h2>I am seeking help for:</h2>
+  <label>
+    <input type="radio" name="info2" value="Myself" required>
+    Myself
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info2" value="Someone else" required>
+    Someone else
+  </label>
+  <br>
+
+  <button id="info2-button">Next</button>
+</div>
+
+<div id="info3" style="display: none;">
+  <h2>Fill in details of the person for whom you are availing the services:
+    Daily engagement:</h2>
+  <label>
+    <input type="radio" name="info3" value="Study in school" required>
+    Study in school
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info3" value="College graduation" required>
+    College graduation
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info3" value="College PG" required>
+    College PG
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info3" value="Not pursuing education" required>
+    Not pursuing education
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info3" value="Homemaker" required>
+    Homemaker
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info3" value="UnEmployed" required>
+    Unemployed
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info3" value="Employed" required>
+    Employed
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info3" value="Business" required>
+    Business
+  </label>
+  <br>
+
+  <button id="info3-button">Next</button>
+</div>
+
+<div id="info4" style="display: none;">
+  <h2>Select the prevalence of abuse/ risk:</h2>
+  <label>
+    <input type="radio" name="info4" value="In the past" required>
+    In the past
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info4" value="Experiencing in the present" required>
+    Experiencing in the present
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info4" value="Receiving threats from someone" required>
+    Receiving threats from someone
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info4" value="Anxious for abuse might occur in the future" required>
+    Anxious for abuse might occur in the future
+  </label>
+  <br>
+
+  <button id="info4-button">Next</button>
+</div>
+
+<div id="info5" style="display: none;">
+  <h2>Your support system: </h2>
+  <label>
+    <input type="radio" name="info5" value="Mother" required>
+    Mother
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info5" value="Father" required>
+    Father
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info5" value="Parents" required>
+    Parents
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info5" value="Sibling(s)" required>
+    Sibling(s)
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info5" value="Grandparents" required>
+    Grandparents
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info5" value="Relatives" required>
+    Relatives
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info5" value="teachers" required>
+    teachers
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info5" value="neighbor" required>
+    neighbor
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info5" value="in-laws" required>
+    in-laws
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info5" value="husband" required>
+    husband
+  </label>
+  <br>
+
+  <button id="info5-button">Next</button>
+</div>
+
+<div id="info6" style="display: none;">
+  <h2>Need protection like a shelter place?</h2>
+  <label>
+    <input type="radio" name="info6" value="No. It is not that severe." required>
+    No. It is not that severe.
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info6" value="Yes. But I don’t know where to contact." required>
+    Yes. But I don’t know where to contact.
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info6" value="Yes. There is no such place available here." required>
+    Yes. There is no such place available here.
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info6" value="Yes. I have sought it." required>
+    Yes. I have sought it.
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info6" value="I am currently living in shelter." required>
+    I am currently living in shelter.
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info6" value="other." required>
+    other.
+  </label>
+  <br>
+
+  <button id="info6-button">Next</button>
+</div>
+
+<div id="info7" style="display: none;">
+  <h2>Need police protection?</h2>
+  <label>
+    <input type="radio" name="info7" value="No. It is not that severe." required>
+    No. It is not that severe.
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info7" value="Yes. But I don’t know where to contact." required>
+    Yes. But I don’t know where to contact.
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info7" value="Yes. But the police here is not helpful." required>
+    Yes. But the police here is not helpful.
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info7" value="Yes. I have sought it." required>
+    Yes. I have sought it.
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info7" value="other." required>
+    other.
+  </label>
+  <br>
+
+  <button id="info7-button">Next</button>
+</div>
+
+<div id="info8" style="display: none;">
+  <h2>Need legal help?</h2>
+  <label>
+    <input type="radio" name="info8" value="Yes. Availed" required>
+    Yes. Availed
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info8" value="In process" required>
+    In process
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info8" value="Denied" required>
+    Denied
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="info8" value="Not needed" required>
+    Not needed
+  </label>
+  <br>
+
+  <button id="info8-button">Next</button>
+</div>
+
+
+<div id="other" style="display: none;">
+  <h2>How would you like us to help?</h2>
+  <form id="question-form">
+    <label>
+      <input type="text" name="q1" required>
+    </label>
+    <br>
+    <h2>Anything else you want to mention [unstarred]</h2>
+    <form id="question-form">
+      <label>
+        <input type="text" name="q2" required>
+      </label>
+      <br>
+        <button type="submit">Submit</button>
+  </form>
+</div>
+
+<div id="result" style="display: none;">
+  <h2>Thank You!</h2>
+  <p>Your responses have been recorded.</p>
+  <br>
+        <!--<button type="NEXT">NEXT</button>-->
+</div>
+
+
+
+<script>
+  // Get references to the HTML elements
+const ageSection = document.querySelector('#age');
+const ageInput = document.querySelector('#age-input');
+const ageButton = document.querySelector('#age-button');
+
+const genderSection = document.querySelector('#gender');
+const genderButton = document.querySelector('#gender-button');
+
+const infoSection = document.querySelector('#info');
+const infoButton = document.querySelector('#info-button');
+
+const info2Section = document.querySelector('#info2');
+const info2Button = document.querySelector('#info2-button');
+
+const info3Section = document.querySelector('#info3');
+const info3Button = document.querySelector('#info3-button');
+
+const info4Section = document.querySelector('#info4');
+const info4Button = document.querySelector('#info4-button');
+
+const info5Section = document.querySelector('#info5');
+const info5Button = document.querySelector('#info5-button');
+
+const info6Section = document.querySelector('#info6');
+const info6Button = document.querySelector('#info6-button');
+
+const info7Section = document.querySelector('#info7');
+const info7Button = document.querySelector('#info7-button');
+
+const info8Section = document.querySelector('#info8');
+const info8Button = document.querySelector('#info8-button');
+
+const otherSection = document.querySelector('#other');
+const submitButton = document.querySelector('button[type="submit"]');
+
+const resultSection = document.querySelector('#result');
+
+
+// Add an event listener to the age button
+ageButton.addEventListener('click', () => {
+// Show the gender section and hide the age section
+genderSection.style.display = 'block';
+ageSection.style.display = 'none';
+});
+
+// Add an event listener to the gender button
+genderButton.addEventListener('click', () => {
+// Show the other section and hide the gender section
+infoSection.style.display = 'block';
+genderSection.style.display = 'none';
+});
+
+// Add an event listener to the info button
+infoButton.addEventListener('click', () => {
+// Show the other section and hide the gender section
+info2Section.style.display = 'block';
+infoSection.style.display = 'none';
+});
+
+// Add an event listener to the info button
+info2Button.addEventListener('click', () => {
+// Show the other section and hide the gender section
+info3Section.style.display = 'block';
+info2Section.style.display = 'none';
+});
+
+// Add an event listener to the info button
+info3Button.addEventListener('click', () => {
+// Show the other section and hide the gender section
+info4Section.style.display = 'block';
+info3Section.style.display = 'none';
+});
+
+// Add an event listener to the info button
+info4Button.addEventListener('click', () => {
+// Show the other section and hide the gender section
+info5Section.style.display = 'block';
+info4Section.style.display = 'none';
+});
+
+// Add an event listener to the info button
+info5Button.addEventListener('click', () => {
+// Show the other section and hide the gender section
+info6Section.style.display = 'block';
+info5Section.style.display = 'none';
+});
+
+// Add an event listener to the info button
+info6Button.addEventListener('click', () => {
+// Show the other section and hide the gender section
+info7Section.style.display = 'block';
+info6Section.style.display = 'none';
+});
+
+// Add an event listener to the info button
+info7Button.addEventListener('click', () => {
+// Show the other section and hide the gender section
+info8Section.style.display = 'block';
+info7Section.style.display = 'none';
+});
+
+// Add an event listener to the info button
+info8Button.addEventListener('click', () => {
+// Show the other section and hide the gender section
+otherSection.style.display = 'block';
+info8Section.style.display = 'none';
+});
+// Add an event listener to the submit button
+submitButton.addEventListener('click', (event) => {
+event.preventDefault(); // Prevent the form from submitting
+
+// Show the result section and hide the other section
+resultSection.style.display = 'block';
+otherSection.style.display = 'none';
+
+
+// Log the user's responses to the console
+console.log('Age:', ageInput.value);
+console.log('Gender:', document.querySelector('input[name="gender"]:checked').value);
+console.log('info:', document.querySelector('input[name="info"]:checked').value);
+console.log('info2:', document.querySelector('input[name="info2"]:checked').value);
+console.log('info3:', document.querySelector('input[name="info3"]:checked').value);
+console.log('info4:', document.querySelector('input[name="info4"]:checked').value);
+console.log('info5:', document.querySelector('input[name="info5"]:checked').value);
+console.log('info6:', document.querySelector('input[name="info5"]:checked').value);
+console.log('info7:', document.querySelector('input[name="info5"]:checked').value);
+console.log('info8:', document.querySelector('input[name="info5"]:checked').value);
+console.log('Question 1:', document.querySelector('input[name="q1"]').value);
+console.log('Question 2:', document.querySelector('input[name="q2"]').value);
+});
+
+</script>
+
+
+
+
+
+
+
+
